@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Bento grid</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --Purple-100: hsl(254, 88%, 90%);
+      --Purple-500: hsl(256, 67%, 59%);
+      --Yellow-100: hsl(31, 66%, 93%);
+      --Yellow-50: hsl(30, 71%, 93%);
+      --Yellow-500: hsl(39, 100%, 71%);
+      --White: hsl(0, 0%, 100%);
+      --Black: hsl(0, 0%, 7%);
+
+        }
+
+    body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 1440px;
+      height: 1029Px;
+      font-size: 18px;
+    }
+    main{background-color: red;
+      width: 1000px;
+      height: 800px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+    }
+
+    .A1{background-color: var(--Purple-500);
+        grid-column: 2/4;
+        grid-row: 1/7;
+        display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 94%;
+      height: 95%;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0.5rem;
+      color: var(--White);}
+
+     .cont-letra-a1{
+      font-size: 3.4rem;
+      font-family:  "Poppins", serif;
+      font-weight: 500;
+      text-align: center;
+     }
+     .diff-a1{
+      font-size: 3.5rem;
+      color: var(--Yellow-500);
+      
+     }
+     .diff-a1-temp2{
+      font-style: italic;
+     }
+     .cont-letra-a1-temp2{
+      
+     }
+     .cont-img-a1{
+      width: 12rem;
+      
+     }
+    .cont-img-a1-st{
+      object-fit: contain;
+      width: 12rem;
+      
+    }
+
+    .A2{background-color:  var(--White);
+      grid-column: 2;
+      grid-row: 7/12;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 85%;
+      height: 90%;
+      justify-content: start;
+      align-items: center;
+      padding-left: 1rem;
+      overflow: hidden;
+      }
+
+    .cont-img-a2{
+      padding: 1rem 0rem 1rem 0rem;
+      width: 15rem;
+      height: 4rem;
+      padding-left: 1.3rem;
+      display: flex;
+    }
+    .cont-img-a2-st{
+      object-fit: cover;
+    }
+
+    .cont-letra-a2{
+      font-size: 1.8rem;
+
+    }
+
+    .A3{background-color: var(--Yellow-500);
+      width: 91%;
+      height: 90%;
+      grid-column: 3/4;
+      grid-row: 7/12;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      
+      justify-content: center;
+      align-items: center;
+      }
+
+      .cont-letra-a3{
+        padding-top: 1rem;
+        padding-bottom: 0.8rem;
+      padding-left: 1.5rem;
+      font-size: 1.8rem;
+
+    }
+      .cont-img-a3{
+        
+        width: 80%;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 0.5rem 0.5rem 0rem 0rem;
+      }
+
+      .cont-img-a3-st{
+        object-fit: cover;
+        width: 100%;
+        height: 8rem;
+
+      }
+
+    .A4{background-color: var(--Purple-100);
+      grid-column: 4/5;
+      grid-row: 1/12;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 85%;
+      height: 95%;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0.5rem;
+      overflow: hidden;  
+    }
+
+      .cont-letra-a4{
+        font-size: 1.8rem;
+        padding-left: 1rem;
+
+      }
+      .cont-letra-a4-temp2{
+        
+        text-align: left;
+        padding-right: 3rem;
+        font-size: 1.0rem;
+        width: 9rem; 
+        height: 6rem;
+      }
+      .cont-img-a4{
+        padding: 1rem 0rem 1rem 1rem;
+        
+        height: 18rem;
+        width: 100%;
+        display: flex;
+        
+      }
+      .cont-img-a4-st{
+        object-fit: contain;
+      }
+
+    .A5{background-color: var(--Purple-500);
+      grid-column: 3/5;
+      grid-row: 12/17;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      border-radius: 0.5rem;
+      width: 91.5%;
+      height: 90%;
+      align-items: center;
+      
+      padding-left: 1rem;}
+      
+    .cont-letra-a5{
+      font-size: 2rem;
+      padding-left: 1rem;
+    }
+
+    .cont-img-a5{
+        height: 100%;
+        width: 32rem;
+        display: flex;
+    }
+    
+    .cont-img-a5-st{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .A6{background-color: var(--White);
+      grid-column: 2/3;
+      grid-row: 12/17;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 91%;
+      height: 90%;
+      align-items: center;
+      }
+      .cont-letra-a6{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+      }
+      .cont-img-a6{
+        height: 4rem;
+        width: 80%;
+        display: flex;
+      }
+      .cont-img-a6-st{
+        object-fit: contain;
+      }      
+      .diff-a6{
+        font-size: 4rem;
+
+      }
+
+    .A7{background-color: var(--Yellow-100);
+      grid-column: 1/2;
+      grid-row: 1/9;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 85%;
+      height: 95%;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1rem;
+    }
+    .cont-letra-a7{
+      font-size: 2rem;
+      font-family:  "Poppins", serif;
+      font-weight: 500;
+    }
+    .cont-img-a7{
+      width: 10rem;
+      height: 5rem;
+      padding-top: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cont-img-a7-st{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .diff-a7{
+      font-size: 2rem;
+      color: var(--Purple-500);
+      font-family:  "Poppins", serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+    .A8{background-color: var(--Yellow-500);
+      grid-column: 0/1;
+      grid-row: 9/17;
+      display: flex;
+      justify-self: center;
+      align-self: center;    
+      flex-direction: column;
+      border-radius: 0.5rem;
+      width: 90%;
+      height: 94%;
+      justify-content: space-evenly;
+      align-items: center;
+      ;}
+
+      .cont-letra-a8{
+      font-size: 2rem;
+      font-family:  "Poppins", serif;
+      font-weight: 500;
+      padding-left: 1rem;
+    }
+    .cont-img-a8{
+      width: 100%;
+      height: 12rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cont-img-a8-st{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      
+    }
+
+    .attribution{
+      padding-top: 2rem;
+      font-size: 1rem;
+      padding-bottom: 2rem;
+      
+    }
+    .enlaces{
+      width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bold;     
+    color: #0db80d !important;
+    }
+
+    @media (max-width: 375px) {
+      body{
+      background-color: aqua;      
+      width: 100%;
+    }
+
+    main{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      border: 0;
+
+    }
+
+    .A1{
+      width: 345.5px;
+      height: 20rem;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      
+    }
+    .cont-letra-a1{
+      font-size: 2.5rem;
+      padding: 0rem 2rem 1rem 2rem;
+    }
+    .diff-a1{
+      font-size: 2.5rem;
+    }
+    .cont-letra-a1-temp2{
+      font-size: 1.4rem;
+    }
+
+    .A2{
+      width: 345.5px;
+      height: 11rem;
+      margin-bottom: 2rem;
+    }
+    .cont-img-a2{
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .A3{
+      
+      width: 95%;
+      height: 15rem;
+      margin-bottom: 2rem;
+
+    }
+    .cont-img-a3{
+      
+      justify-content: start;
+      width: 19.5rem;
+    }
+    .cont-img-a3-st{
+      border-radius: 0.5rem 0.5rem 0rem 0rem;
+      
+      height: 9.7rem;
+      width: 75%;
+    }
+
+    .A4{
+      width: 90%;
+      height: 30rem;
+      margin-bottom: 2rem;
+    }
+    .cont-letra-a4-temp2{
+      padding: 0;
+      text-align: center;
+      font-size: 1.3rem;
+      width: 85%;
+      
+      
+    }
+
+    .A5{
+      overflow: hidden;
+      width: 0%;
+      height: 0rem;
+    }
+
+    .A6{
+
+      width: 90%;
+      height: 12rem;
+      align-items: start;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+    .cont-letra-a6{
+      
+      padding-bottom: 1rem;
+      
+    }
+    .diff-a6{
+      font-size: 3rem;
+    }
+
+    .A7{
+      width: 90%;
+      height: 16rem;
+      margin-bottom: 2rem;
+    }
+
+    .A8{
+      width: 94%;
+      height: 20rem;
+      margin-bottom: 2rem;
+    }
+    .cont-letra-a8{
+      
+      line-height: 2rem;
+    }
+    .cont-img-a8{
+      
+      align-items: start;
+      justify-content: start;
+    }
+    .cont-img-a8-st{
+      
+      width: 50%;
+      padding-left: 1rem;
+    }
+    }
+
+  </style>
+</head>
+<body>
+
+  <main class="Conteiner">
+  <div class="A1">
+  <div class="cont-letra-a1">Social Media <span class="diff-a1">10x</span> <span class="diff-a1-temp2">Faster</span> with AI</div>
+  <div class="cont-img-a1">
+    <img class="cont-img-a1-st" src="assets/images/illustration-five-stars.webp" alt="">
+  </div>
+  <div class="cont-letra-a1-temp2">Over 4,000 5-star reviews</div>
+  </div>
+
+  <div class="A2">
+      <div class="cont-img-a2">
+        <img class="cont-img-a2-st" src="assets/images/illustration-multiple-platforms.webp" alt="">
+      </div>
+  <div class="cont-letra-a2">Manage multiple accounts and platforms.</div>
+  </div>
+
+  <div class="A3">
+    
+    <div class="cont-letra-a3">Maintain a consistent posting schedule.</div>
+    <div class="cont-img-a3">
+      <img class="cont-img-a3-st" src="assets/images/illustration-consistent-schedule.webp" alt="">
+    </div>
+  </div>
+
+  <div class="A4">
+    <div class="cont-letra-a4">Schedule to social media.</div>
+    <div class="cont-img-a4">
+      <img class="cont-img-a4-st" src="assets/images/illustration-schedule-posts.webp" alt="">
+    </div>
+    <div class="cont-letra-a4-temp2">Optimize post timings to publish content at the perfect time for your audience.</div>
+  </div>
+
+  <div class="A5">
+    <div class="cont-img-a5" >
+      <img class="cont-img-a5-st" src="assets/images/illustration-grow-followers.webp" alt="">
+    </div>
+    <div class="cont-letra-a5">Grow followers with non-stop content.</div>
+  </div>
+
+  <div class="A6">
+    <div class="cont-letra-a6"><span class="diff-a6">>56%</span><br>faster audience growth</div>
+    <div class="cont-img-a6">
+      <img class="cont-img-a6-st" src="assets/images/illustration-audience-growth.webp" alt="">
+    </div>
+  </div>
+
+  <div class="A7">
+    <div class="cont-letra-a7">
+      Create and schedule content <span class="diff-a7">quicker.</span>
+    </div>
+    <div class="cont-img-a7">
+      <img class="cont-img-a7-st" src="/assets/images/illustration-create-post.webp" alt="post">
+    </div>
+  </div>
+
+  <div class="A8">
+    <div class="cont-letra-a8">Write your content using AI.</div>
+    <div class="cont-img-a8">
+      <img class="cont-img-a8-st" src="assets/images/illustration-ai-content.webp" alt="">
+    </div>
+  </div>
+
+</main>
+
+  <div class="attribution">
+    Challenge by <a class="enlaces" href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a class="enlaces" href="https://www.frontendmentor.io/profile/javierr66">Javier Suarez</a>.
+  </div>
+</body>
+</html>
